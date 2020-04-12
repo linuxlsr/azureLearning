@@ -13,6 +13,11 @@ variable "creator" {
   default     = "Terraform"
 }
 
+variable "location" {
+  description = "region where resources are created"
+  default     = "westus"
+}
+
 variable "vpc_cidr" {
   description = "network cidr block"
   default     = "10.0.0.0/22"
@@ -38,4 +43,8 @@ variable "private3" {
   default     = "10.0.3.0/24"
 }
 
+variable "vmsize" {
+  description = "compute vm instance size"
+  default     = "Standard_DS1_v2"
+}
 

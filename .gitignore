@@ -1,0 +1,5 @@
+.terraform
+*.plan
+*.state
+*.backup
+id_rsa.pub
