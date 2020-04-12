@@ -6,3 +6,12 @@ resource "azurerm_resource_group" "first_rg" {
     Name = "first resource group" },
   local.common_tags)
 }
+
+# for tfstate
+resource "azurerm_resource_group" "tfstate" {
+  name     = "tfstate"
+  location = var.location
+  tags = merge({
+    Name = "tfstate-rg" },
+  local.common_tags)
+}
