@@ -8,7 +8,7 @@ provider "azurerm" {
 //  backend "azurerm" {
 //    resource_group_name   = "tfstate"
 //    storage_account_name  = "tfstatesalinuxlsr"
-//    key                   = "terraform.tfstate"
-//    container_name        = "tfstate"
+//    key                   = "$ARM_ACCESS_KEY"
+//    container_name        = "tfstatestorage"
 //  }
 //}

@@ -12,8 +12,8 @@ resource "azurerm_linux_virtual_machine" "testing" {
   }
 
   admin_ssh_key {
-    username    = "linuxlsr"
-    public_key  = file("id_rsa.pub")
+    username   = "linuxlsr"
+    public_key = file("id_rsa.pub")
   }
   source_image_reference {
     publisher = "Canonical"
@@ -50,5 +50,5 @@ resource "azurerm_network_interface" "test_vm_nic" {
   }
   tags = merge({
     Name = "test vm nic" },
-    local.common_tags)
+  local.common_tags)
 }

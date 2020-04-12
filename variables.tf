@@ -45,6 +45,6 @@ variable "private3" {
 
 variable "vmsize" {
   description = "compute vm instance size"
-  default     = "Standard_DS1_v2"
+  default     = "Standard_B1ms"
 }
 
