@@ -12,7 +12,7 @@ resource "azurerm_network_security_group" "test_vm_sg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "104.172.161.115/32"
+    source_address_prefix      = var.local_ip
     destination_address_prefix = "*"
   }
 

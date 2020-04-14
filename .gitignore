@@ -4,3 +4,4 @@
 *.backup
 id_rsa.pub
 *.tfstate
+*.tfvars

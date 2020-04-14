@@ -1,3 +1,11 @@
+variable "tenant_id" {
+  description = "tenant id, should be pulled from key vault"
+}
+
+variable "local_ip" {
+  description = "for local access"
+}
+
 variable "environment" {
   description = "deployment env"
   default     = "dev"
