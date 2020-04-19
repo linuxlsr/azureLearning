@@ -26,6 +26,6 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  ## Gotchas
  VMs cost, even if they are not running, unlike AWS EC2 which doesn't charge for stopped instances, only their storage
  
- Some resource name tags can only be 32 characters and no special charaters. I suspect this is do to the name being used as a public & unique endpoint and conforming to a very narrow set of DNS name rules.
+ Some resource name tags can only be 32 characters and no special charaters. I suspect this is due to the name being used as a public & unique endpoint and conforming to a very narrow set of DNS name rules.
  
  OMS workspace names have to be unique.
