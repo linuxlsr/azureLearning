@@ -1,4 +1,4 @@
-### From AWS to Azure
+# From AWS to Azure
 
 This is my first foray into creating resources in Azure with terraform.
 
@@ -6,9 +6,9 @@ This is my first foray into creating resources in Azure with terraform.
 This deployment experiment uses a local terraform .tfvars file that is not commmited to the repo.
 The variables used are:
  
- tenant_id
- local_ip  #for access from my home network to the resources public IPs
- action_group_active
+ - tenant_id
+ - local_ip  #for access from my home network to the resources public IPs
+ - action_group_active
 
 ## initial Observations
 1. Azure clusters their services, such as storage, where AWS breaks items that use storage into separate granular services.
@@ -19,9 +19,9 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 
 ## Useful links
- [Device authentication link, for Azure's docker cli][https://microsoft.com/devicelogin]
- [VM instance sizes][https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes]
- [Azure Service Limits][https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits]
+ - [Device authentication link, for Azure's docker cli](https://microsoft.com/devicelogin)
+ - [VM instance sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)
+ - [Azure Service Limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
  
  ## Gotchas
  VMs cost, even if they are not running, unlike AWS EC2 which doesn't charge for stopped instances, only their storage
