@@ -56,3 +56,7 @@ variable "vmsize" {
   default     = "Standard_B1ms"
 }
 
+variable "action_group_active" {
+  description = "switch to enable / diable action group alerting"
+  default     = false
+}
