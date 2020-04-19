@@ -5,3 +5,4 @@
 id_rsa.pub
 *.tfstate
 *.tfvars
+_config.yml
