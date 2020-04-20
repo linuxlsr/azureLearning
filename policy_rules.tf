@@ -38,19 +38,19 @@ PARAMETERS
 
 }
 
-resource "azurerm_policy_assignment" "restrict_region_assigned_rg" {
-  name                 = "restrictToResourceGroup"
-  policy_definition_id = azurerm_policy_definition.restrict_region.id
-  scope                = azurerm_resource_group.first_rg.id
-  identity {
-    type = "SystemAssigned"
-  }
-
-  parameters = <<PARAMETERS
-  {
-    "allowedLocations": {
-      "location": ["westus"]
-    }
-  }
-  PARAMETERS
-}
+//resource "azurerm_policy_assignment" "restrict_region_assigned_rg" {
+//  name                 = "restrictToResourceGroup"
+//  policy_definition_id = azurerm_policy_definition.restrict_region.id
+//  scope                = azurerm_resource_group.first_rg.id
+//  identity {
+//    type = "SystemAssigned"
+//  }
+//
+//  parameters = <<PARAMETERS
+//  {
+//    "allowedLocations": {
+//      "location": ["westus"]
+//    }
+//  }
+//  PARAMETERS
+//}
