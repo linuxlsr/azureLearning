@@ -9,6 +9,8 @@ The variables used are:
  - tenant_id
  - local_ip  #for access from my home network to the resources public IPs
  - action_group_active
+ - repo      # for tagging resources deployed by their code repo
+ - infra     # specific code / repo for networking infrastructure
 
 ## initial Observations
 1. Azure clusters their services, such as storage, where AWS breaks items that use storage into separate granular services.
@@ -29,3 +31,9 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  Some resource name tags can only be 32 characters and no special charaters. I suspect this is due to the name being used as a public & unique endpoint and conforming to a very narrow set of DNS name rules.
  
  OMS workspace names have to be unique.
+ 
+ Subnet names for azure firewall resources must be exactly 'AzureFirewallSubnet'. WTF? Does this mean I declare subnets twice?
+ 
+ azure firewall rules can not be updated, only destroyed and recreated
+ 
+ Interpolating variables in heredoc json not working for me, yet.

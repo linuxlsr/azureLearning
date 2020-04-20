@@ -3,6 +3,8 @@ locals {
     Environment = var.environment
     Application = var.application
     Creator     = var.creator
+    Repo        = var.repo
+    Infra       = var.infra
   }
 }
 

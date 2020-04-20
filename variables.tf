@@ -1,9 +1,21 @@
+variable "repo" {
+  description = "where code for resource resides"
+}
+
+variable "infra" {
+  description = "specific code / repo for infrastructure"
+}
+
 variable "tenant_id" {
   description = "tenant id, should be pulled from key vault"
 }
 
 variable "local_ip" {
   description = "for local access"
+}
+
+variable "local_ipv4" {
+  description = "ip w/o mask"
 }
 
 variable "environment" {
@@ -28,14 +40,14 @@ variable "location" {
 
 variable "vpc_cidr" {
   description = "network cidr block"
-  default     = "10.0.0.0/22"
+  default     = "10.0.0.0/21"
 }
 
-variable "public0" {
-  description = "public subnet1 cidr block"
+variable "firewall_subnet" {
+  description = "subnet for firewall"
   default     = "10.0.0.0/24"
-
 }
+
 variable "public1" {
   description = "public subnet1 cidr block"
   default     = "10.0.1.0/24"
@@ -49,6 +61,11 @@ variable "private2" {
 variable "private3" {
   description = "subnet3 cidr block"
   default     = "10.0.3.0/24"
+}
+
+variable "private4" {
+  description = "subnet3 cidr block"
+  default     = "10.0.4.0/24"
 }
 
 variable "vmsize" {
