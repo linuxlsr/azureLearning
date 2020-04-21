@@ -68,13 +68,13 @@ resource "azurerm_public_ip" "vm_ip" {
   local.common_tags)
 }
 
-resource "azurerm_public_ip" "storage_ip" {
-  location            = var.location
-  name                = "${var.application}_${var.environment}_storage_ip"
-  resource_group_name = azurerm_resource_group.first_rg.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
-  tags = merge({
-    Name = "storage ip" },
-  local.common_tags)
-}
+//resource "azurerm_public_ip" "storage_ip" {
+//  location            = var.location
+//  name                = "${var.application}_${var.environment}_storage_ip"
+//  resource_group_name = azurerm_resource_group.first_rg.name
+//  allocation_method   = "Static"
+//  sku                 = "Standard"
+//  tags = merge({
+//    Name = "storage ip" },
+//  local.common_tags)
+//}

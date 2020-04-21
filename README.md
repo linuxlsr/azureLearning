@@ -69,3 +69,5 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  azure firewall rules can not be updated, only destroyed and recreated
  
  Interpolating variables in heredoc json not working for me, yet.
+
+Azure Firewall is not cheap. One rule for day cost nearly $20 without traffic.
