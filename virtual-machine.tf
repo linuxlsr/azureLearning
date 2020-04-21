@@ -28,15 +28,7 @@
 //
 //}
 //
-//resource "azurerm_public_ip" "test_ip" {
-//  location            = var.location
-//  name                = "${var.application}_${var.environment}_test_vm_ip"
-//  resource_group_name = azurerm_resource_group.first_rg.name
-//  allocation_method   = "Static"
-//  tags = merge({
-//    Name = "test ip" },
-//  local.common_tags)
-//}
+//
 //
 //resource "azurerm_network_interface" "test_vm_nic" {
 //  location            = var.location
@@ -45,8 +37,8 @@
 //  ip_configuration {
 //    name                          = "${var.application}_${var.environment}_test_ip"
 //    private_ip_address_allocation = "Dynamic"
-//    subnet_id                     = azurerm_subnet.subnet_0.id
-//    public_ip_address_id          = azurerm_public_ip.test_ip.id
+//    subnet_id                     = azurerm_subnet.subnet_1.id
+//    public_ip_address_id          = azurerm_public_ip.vm_ip.id
 //  }
 //  tags = merge({
 //    Name = "test vm nic" },

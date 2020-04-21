@@ -1,6 +1,6 @@
 # high level combination of AWS resource groups and tags, but is the first step, rather than bolted on afterwards.
 
-# TODO create policy defition to restrict region
+# TODO create policy definition to restrict region
 # TODO create policy assignment to apply to resource group
 
 resource "azurerm_resource_group" "first_rg" {
