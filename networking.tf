@@ -58,15 +58,15 @@ resource "azurerm_subnet" "subnet_4" {
 //}
 
 # IPs
-resource "azurerm_public_ip" "vm_ip" {
-  location            = var.location
-  name                = "${var.application}_${var.environment}_test_vm_ip"
-  resource_group_name = azurerm_resource_group.first_rg.name
-  allocation_method   = "Static"
-  tags = merge({
-    Name = "test ip" },
-  local.common_tags)
-}
+//resource "azurerm_public_ip" "vm_ip" {
+//  location            = var.location
+//  name                = "${var.application}_${var.environment}_test_vm_ip"
+//  resource_group_name = azurerm_resource_group.first_rg.name
+//  allocation_method   = "Static"
+//  tags = merge({
+//    Name = "test ip" },
+//  local.common_tags)
+//}
 
 //resource "azurerm_public_ip" "storage_ip" {
 //  location            = var.location

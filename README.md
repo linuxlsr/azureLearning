@@ -54,3 +54,6 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  Azure Firewall is not cheap. One rule for day cost nearly $20 without traffic.
  
  Security Center is like Trusted Advisor, with 30 days free and cost per asset. Nice dashboard.
+ 
+ MFA is not available for free, but tied to additional service plans and Office 365 integration, unlike AWS which does it for free. Sigh. Make sure your Microsoft account that owns your subscription is a secure as possible.
+ 
