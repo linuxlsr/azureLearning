@@ -3,7 +3,7 @@ resource "azurerm_storage_account" "state_storage_account" {
   account_replication_type = "GRS"
   account_tier             = "Standard"
   location                 = var.location
-  name                     = "tfstatesalinuxsr"
+  name                     = "tfstatesalinuxlsr"
   resource_group_name      = azurerm_resource_group.tfstate.name
 }
 

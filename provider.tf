@@ -4,11 +4,7 @@ provider "azurerm" {
   features {}
 }
 
-//terraform {
-//  backend "azurerm" {
-//    resource_group_name   = "tfstate"
-//    storage_account_name  = "tfstatesalinuxlsr"
-//    key                   = "$ARM_ACCESS_KEY"
-//    container_name        = "tfstatestorage"
-//  }
-//}
+# backend config vars removed and executed as a script that gets access key and initializes remote backend.
+terraform {
+  backend "azurerm" {}
+}

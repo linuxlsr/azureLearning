@@ -7,6 +7,8 @@ variable "infra" {
   description = "specific code / repo for infrastructure"
 }
 
+variable "subscription_id" {}
+
 variable "tenant_id" {
   description = "tenant id, should be pulled from key vault"
 }
