@@ -96,3 +96,5 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  
  storage shares have quota limits, unlike s3 which is unlimited.
  
+ Potential gotcha with security group rule priority order. Can get lengthy, may have to break up rule sets by resource types.
+ 
