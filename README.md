@@ -94,3 +94,5 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  
  Recovery Service Vault Names can't have underscores, only letters, numbers and hyphens. 
  
+ storage shares have quota limits, unlike s3 which is unlimited.
+ 
