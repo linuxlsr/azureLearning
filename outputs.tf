@@ -37,3 +37,11 @@ output "state_rg" {
 output "share_url" {
   value = azurerm_storage_share.gsa_share.url
 }
+
+//output "mysql_endpoint" {
+//  value = azurerm_mysql_server.test_mysql_svr.fqdn
+//}
+//
+//output "mssql_endpoint" {
+//  value = azurerm_sql_server.test_sql_server.fully_qualified_domain_name
+//}

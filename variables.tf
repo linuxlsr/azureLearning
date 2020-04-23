@@ -13,6 +13,8 @@ variable "tenant_id" {
   description = "tenant id, should be pulled from key vault"
 }
 
+//variable "arm_access_key" {}
+
 variable "environment" {
   description = "deployment env"
   default     = "dev"

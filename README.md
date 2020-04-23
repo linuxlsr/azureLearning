@@ -69,11 +69,15 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 3. Resource groups are not optional nor tag based like AWS. RGs are a type of super container into which all subordinate resources are placed.
 
+4. Remote state mgt seems a bit easier, as you don't have to worry as much about the state file path, but can create separate storage containers for separate apps, environments, etc.
 
 ## Useful Links
  - [Device authentication link, for Azure's docker cli](https://microsoft.com/devicelogin)
  - [VM instance sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)
  - [Azure Service Limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
+ - [Managed DB Pricing](https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/) 
+ - [Cost Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
+ - [SQL Server Version List](https://en.wikipedia.org/wiki/History_of_Microsoft_SQL_Server)
  
  ## Gotchas
  VMs cost, even if they are not running, unlike AWS EC2 which doesn't charge for stopped instances, only their storage
@@ -99,4 +103,11 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  storage shares have quota limits, unlike s3 which is unlimited.
  
  Potential gotcha with security group rule priority order. Can get lengthy, may have to break up rule sets by resource types.
+
+ Databases have two pieces, the database and the instance specs, rather than being treated as a consolidated service type.
  
+ If you set a password as a value, make sure it is complex or you'll trip the default password policy.
+ 
+ mysql_server name is part of endpoint dns, so it has to be unique. Good luck guessing. 
+ 
+ you can't apply tags to a mysql_database resource, for some rando reason. 
