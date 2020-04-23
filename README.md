@@ -38,7 +38,7 @@ security_center_pricing_tier
  security_center_workspaces
 ```
 ## Remote State
-In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using (https://www.terraform.io/docs/backends/config.html) as a guide to partial backend configuration.
+In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using[Backend / Partial Configuration] (https://www.terraform.io/docs/backends/config.html#partial-configuration) as a guide.
 ```
 #!/bin/bash
 # replace these with your values from your initial local state deployment
@@ -91,4 +91,6 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  Security Center is like Trusted Advisor, with 30 days free and cost per asset. Nice dashboard.
  
  MFA is not available for free, but tied to additional service plans and Office 365 integration, unlike AWS which does it for free. Sigh. Make sure your Microsoft account that owns your subscription is a secure as possible.
+ 
+ Recovery Service Vault Names can't have underscores, only letters, numbers and hyphens. 
  
