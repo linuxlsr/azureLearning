@@ -16,6 +16,30 @@ resource "azurerm_network_security_group" "test_vm_sg" {
     destination_address_prefix = "*"
   }
 
+  security_rule {
+    name                       = "http80"
+    access                     = "Allow"
+    direction                  = "Inbound"
+    priority                   = 1005
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "80"
+    source_address_prefix      = "0.0.0.0/0"
+    destination_address_prefix = "*"
+  }
+
+  security_rule {
+    name                       = "http8080"
+    access                     = "Allow"
+    direction                  = "Inbound"
+    priority                   = 1010
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "8080"
+    source_address_prefix      = "0.0.0.0/0"
+    destination_address_prefix = "*"
+  }
+
   tags = merge({
     Name = "first security group" },
   local.common_tags)

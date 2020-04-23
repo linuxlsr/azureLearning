@@ -35,7 +35,8 @@ security_center_alerts_to_admins
 security_center_contact_email
 security_center_contact_phone
 security_center_pricing_tier
- security_center_workspaces
+security_center_workspaces
+admin_username 
 ```
 ## Remote State
 In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using[Backend / Partial Configuration] (https://www.terraform.io/docs/backends/config.html#partial-configuration) as a guide.
@@ -66,6 +67,7 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 2. AWS gives you much more granular control over security, and thus if you err it is due to your lack of knowledge. Azure appears to be more security first designed, so things like blob storage is treated as a firewall rule while S3 is only recently private by default.
 
+3. Resource groups are not optional nor tag based like AWS. RGs are a type of super container into which all subordinate resources are placed.
 
 
 ## Useful Links

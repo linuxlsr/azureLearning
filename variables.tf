@@ -99,6 +99,8 @@ variable "vmsize" {
   default     = "Standard_B1ms"
 }
 
+variable "admin_username" {}
+
 # monitoring
 variable "action_group_active" {
   description = "switch to enable / diable action group alerting"
