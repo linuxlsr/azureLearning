@@ -78,6 +78,7 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  - [Managed DB Pricing](https://azure.microsoft.com/en-us/pricing/details/sql-database/managed/) 
  - [Cost Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
  - [SQL Server Version List](https://en.wikipedia.org/wiki/History_of_Microsoft_SQL_Server)
+
  
  ## Gotchas
  
