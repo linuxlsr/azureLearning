@@ -44,17 +44,20 @@ resource "azurerm_subnet" "subnet_4" {
   address_prefix       = var.private4
 }
 
-# IGW & route table, routes for public, private
-//resource "azurerm_virtual_network_gateway" "igw" {
-//  location            = "westus"
-//  name                = "${var.application}_gateway"
+# route table
+//resource "azurerm_route_table" "vn1_fw_subnet" {
+//  name                = var.route_table_name
+//  location            = var.location
 //  resource_group_name = azurerm_resource_group.first_rg.name
-//  sku                 = "Basic"
-//  type                = "Vpn"
 //
-//  ip_configuration {
-//    subnet_id = ""
-//  }
+//  tags = merge({
+//    Name = "vn1_route_table_fw_subnet" },
+//  local.common_tags)
+//}
+//
+//resource "azurerm_subnet_route_table_association" "vn1_rt_assoc" {
+//  route_table_id = azurerm_route_table.vn1_fw_subnet.id
+//  subnet_id = azurerm_subnet.fw_subnet.id
 //}
 
 # IPs
