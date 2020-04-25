@@ -1,26 +1,7 @@
-//# MySQL database resources
-//resource "azurerm_mysql_server" "test_mysql_svr" {
-//  location                     = var.location
-//  sku_name                     = "B_Gen5_2"
-//  administrator_login          = var.admin_username
-//  administrator_login_password = "f9pfmh$zBylw(f." # need to integrate secrets management
-//  version                      = "5.7"
-//  ssl_enforcement              = "Enabled"
-//  name                         = "linuxlsrmysqlsvr"
-//  resource_group_name          = azurerm_resource_group.first_rg.name
-//
-//  storage_profile {
-//    storage_mb = 5120
-//    //    backup_retention_days = 7
-//    geo_redundant_backup = "Disabled"
-//    auto_grow            = "Enabled"
-//  }
-//
-//  tags = merge({
-//    Name = "first mysql server" },
-//  local.common_tags)
-//}
-//
+# MySQL database resources
+# two public mysql mods broken by Blocks of type "sku" are not expected here.
+
+
 //resource "azurerm_mysql_database" "test_mysql_db" {
 //  charset             = "utf8"
 //  collation           = "utf8_unicode_ci"
@@ -58,4 +39,27 @@
 ////    storage_account_access_key_is_secondary = true
 ////    retention_in_days                       = 6
 ////  }
+//}
+
+//# this works :-)
+//module "mysql" {
+//  source                = "./custom_modules/mysql"
+//  admin_username        = var.admin_username
+//  db_name               = "test-mysql-db"
+//  location              = var.location
+//  password              = var.db_password
+//  backup_retention_days = 7
+//  charset               = "utf8"
+//  collation             = "utf8_unicode_ci"
+//  db_version            = "5.7"
+//  resource_group_name   = azurerm_resource_group.first_rg.name
+//  sku_capacity          = 2
+//  sku_family            = "Gen5"
+//  sku_name              = "B_Gen5_2"
+//  sku_tier              = "Basic"
+//  ssl_enforcement       = "Enabled"
+//  storage_mb            = 5120
+//  auto_grow             = "Disabled"
+//  tags                  = merge({ Name = "first_fw_rule" }, local.common_tags)
+//  geo_redundant_backup  = "Disabled"
 //}

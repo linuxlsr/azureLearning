@@ -110,3 +110,6 @@ variable "action_group_active" {
   description = "switch to enable / diable action group alerting"
   default     = false
 }
+
+# database
+variable "db_password" {}

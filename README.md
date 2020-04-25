@@ -42,6 +42,16 @@ admin_username
 In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using[Backend / Partial Configuration] (https://www.terraform.io/docs/backends/config.html#partial-configuration) as a guide.
 ```
 #!/bin/bash
+
+# test if .terraform exists, and if so, delete it
+if [ -a ".terraform" ]
+ then
+        echo "attempting delete";
+        rm -rfv ./.terraform;
+ else
+        echo "no .terraform to delete"
+fi
+
 # replace these with your values from your initial local state deployment
 RESOURCE_GROUP_NAME='myResourceGroup' 
 STORAGE_ACCOUNT_NAME='myStorageAccountName'
