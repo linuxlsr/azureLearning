@@ -5,6 +5,6 @@ provider "azurerm" {
 }
 
 # backend config vars removed and executed as a script that gets access key and initializes remote backend.
-//terraform {
-//  backend "azurerm" {}
-//}
+terraform {
+  backend "azurerm" {}
+}
