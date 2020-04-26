@@ -52,6 +52,15 @@ if [ -a ".terraform" ]
         echo "no .terraform to delete"
 fi
 
+# test if plan exists, and if so, delete it
+if [ -a *.plan ]
+ then
+        echo "deleting plan"
+        rm -f *.plan;
+ else
+        echo "no .plan to delete";
+fi
+
 # replace these with your values from your initial local state deployment
 RESOURCE_GROUP_NAME='myResourceGroup' 
 STORAGE_ACCOUNT_NAME='myStorageAccountName'
