@@ -41,25 +41,25 @@
 ////  }
 //}
 
-# this works :-)
-module "mysql" {
-  source                = "./custom_modules/mysql"
-  admin_username        = var.admin_username
-  db_name               = "test-mysql-db"
-  location              = var.location
-  password              = var.db_password
-  backup_retention_days = 7
-  charset               = "utf8"
-  collation             = "utf8_unicode_ci"
-  db_version            = "5.7"
-  resource_group_name   = azurerm_resource_group.first_rg.name
-  sku_capacity          = 2
-  sku_family            = "Gen5"
-  sku_name              = "B_Gen5_2"
-  sku_tier              = "Basic"
-  ssl_enforcement       = "Enabled"
-  storage_mb            = 5120
-  auto_grow             = "Disabled"
-  tags                  = merge({ Name = "first_fw_rule" }, local.common_tags)
-  geo_redundant_backup  = "Disabled"
-}
+//# this works :-)
+//module "mysql" {
+//  source                = "./custom_modules/mysql"
+//  admin_username        = var.admin_username
+//  db_name               = "test-mysql-db"
+//  location              = var.location
+//  password              = var.db_password
+//  backup_retention_days = 7
+//  charset               = "utf8"
+//  collation             = "utf8_unicode_ci"
+//  db_version            = "5.7"
+//  resource_group_name   = azurerm_resource_group.first_rg.name
+//  sku_capacity          = 2
+//  sku_family            = "Gen5"
+//  sku_name              = "B_Gen5_2"
+//  sku_tier              = "Basic"
+//  ssl_enforcement       = "Enabled"
+//  storage_mb            = 5120
+//  auto_grow             = "Disabled"
+//  tags                  = merge({ Name = "first_fw_rule" }, local.common_tags)
+//  geo_redundant_backup  = "Disabled"
+//}

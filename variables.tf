@@ -32,7 +32,7 @@ variable "creator" {
 
 variable "location" {
   description = "region where resources are created"
-  default     = "westus"
+  default     = "westus2"
 }
 
 # security center
