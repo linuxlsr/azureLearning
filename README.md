@@ -90,6 +90,10 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 4. Remote state mgt seems a bit easier, as you don't have to worry as much about the state file path, but can create separate storage containers for separate apps, environments, etc.
 
+5. You can use custom policies to auto tag resources that will be deployed, instead of manually applying a map of tags at each resource. You can also use compliance rules to identify if resources have the correct tags or not. Approaching tagging from an architectural level rather than resource level.
+
+6. Resource group locks are cool, similar to lifecycle policies and rds but at the resource group level, keep someone from blowing all your stuff away with one click.
+
 ## Useful Links
  - [Device authentication link, for Azure's docker cli](https://microsoft.com/devicelogin)
  - [VM instance sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)
