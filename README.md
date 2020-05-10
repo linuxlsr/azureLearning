@@ -147,5 +147,4 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  
  Deleting a resource protected by a backup policy is like trying to delete an rds instance with snapshots, you can't kill it till all the backups are gone. Got stuck with a VM that won't go away because a backup remains in the vault.
 [unable to destroy VM protected items #4276](https://github.com/terraform-providers/terraform-provider-azurerm/issues/4276) 
-
- 
+ workaround: ```terraform state rm  azurerm_backup_protected_vm.first-vm-backup-protect```
