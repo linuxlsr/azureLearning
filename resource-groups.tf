@@ -23,10 +23,9 @@ resource "azurerm_resource_group" "console" {
   tags     = merge({ Name = "console_built" }, local.common_tags)
 }
 
-
-resource "azurerm_management_lock" "lock-first-rg" {
-  lock_level = "CanNotDelete"
-  name = "locked-first-rg"
-  scope = azurerm_resource_group.first_rg.id
-  notes = "no delete first rg"
+resource "azurerm_resource_group" "ephemeral" {
+  name     = "ephemeral"
+  location = var.location
+  tags     = merge({ Name = "ephemeral" }, local.common_tags)
 }
+

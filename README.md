@@ -94,6 +94,10 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 6. Resource group locks are cool, similar to lifecycle policies and rds but at the resource group level, keep someone from blowing all your stuff away with one click.
 
+7. Azure vm backups are significantly easier to implement than AWS Backup Plan.
+
+8. I do appreciate the email warning I get when a backup policy protected vm's backup is marked for delete with the rsv set to soft delete.
+
 ## Useful Links
  - [Device authentication link, for Azure's docker cli](https://microsoft.com/devicelogin)
  - [VM instance sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)
@@ -136,3 +140,12 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  mysql_server name is part of endpoint dns, so it has to be unique. Good luck guessing. 
  
  you can't apply tags to a mysql_database resource, for some rando reason. 
+ 
+ The azure vm module creates a default open ssh sg and applies it to the network interface. Doesn't allow attaching of custom sg rule or modification of defaults by input. Better to build your own custom module, for vm as well and network, which doesn't provide the necessary subnet ids. Sigh. It appears to get overridden by the sg that is applied to the subnet, but don't like having two conflicting SGs.
+ 
+ can't add variables in the variables.tf or test.tfvars, but did successfully use external data provider to get my vpn ip and apply it to the sg source_address_prefix, so that deprecates the need for a manual local_ip var. 
+ 
+ Deleting a resource protected by a backup policy is like trying to delete an rds instance with snapshots, you can't kill it till all the backups are gone. Got stuck with a VM that won't go away because a backup remains in the vault.
+[unable to destroy VM protected items #4276](https://github.com/terraform-providers/terraform-provider-azurerm/issues/4276) 
+
+ 

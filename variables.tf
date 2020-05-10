@@ -57,13 +57,13 @@ variable "security_center_workspaces" {
 }
 
 # networking
-variable "local_ip" {
-  description = "for local access"
-}
+//variable "local_ip" {
+//  description = "for local access"
+//}
 
-variable "local_ipv4" {
-  description = "ip w/o mask"
-}
+//variable "local_ipv4" {
+//  description = "ip w/o mask"
+//}
 
 variable "vpc_cidr" {
   description = "network cidr block"

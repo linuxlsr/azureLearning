@@ -12,7 +12,7 @@
 
 //output "rg" { value = azurerm_resource_group.first_rg.name }
 
-output "state_rg" { value = azurerm_resource_group.tfstate.name }
+//output "state_rg" { value = azurerm_resource_group.tfstate.name }
 
 //////output "oms_workspace_name" {
 //////  value = azurerm_log_analytics_workspace.first_oms_workspace.name

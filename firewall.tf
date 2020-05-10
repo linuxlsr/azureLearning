@@ -1,3 +1,4 @@
+# expensive, like WAF. >$30 a day for a single rule, yikes.
 //resource "azurerm_firewall" "first_fw_rule" {
 //  location            = var.location
 //  name                = "firstFW"
