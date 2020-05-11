@@ -98,6 +98,12 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
 
 8. I do appreciate the email warning I get when a backup policy protected vm's backup is marked for delete with the rsv set to soft delete.
 
+9. Azure vnets do not need explicit route tables, they are auto generated. You only need route tables if you have explicit, user defined routes.
+
+10. Azure implements an application security group as well, can be used in combination with network security groups. 
+
+11. You can set up a vpn gateway and MS provides a client for remote systems to connect. There are 4 diff vpn price levels. based on features and throughput.
+
 ## Useful Links
  - [Device authentication link, for Azure's docker cli](https://microsoft.com/devicelogin)
  - [VM instance sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)
