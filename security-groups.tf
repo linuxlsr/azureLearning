@@ -89,3 +89,5 @@ resource "azurerm_subnet_network_security_group_association" "sg-assoc-sn1" {
 //  network_security_group_id = azurerm_network_security_group.test_vm_sg.id
 //  network_interface_id = module.linux_vm.network_interface_ids[0]
 //}
+
+# TODO create app security group

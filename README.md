@@ -112,6 +112,7 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  - [Cost Calculator](https://azure.microsoft.com/en-us/pricing/calculator/)
  - [Backup Pricing](https://azure.microsoft.com/en-us/pricing/details/backup/)
  - [SQL Server Version List](https://en.wikipedia.org/wiki/History_of_Microsoft_SQL_Server)
+ - [MS Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/)
  
 
  

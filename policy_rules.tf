@@ -37,7 +37,7 @@
 //PARAMETERS
 //
 //}
-
+//
 //resource "azurerm_policy_assignment" "restrict_region_assigned_rg" {
 //  name                 = "restrictToResourceGroup"
 //  policy_definition_id = azurerm_policy_definition.restrict_region.id
