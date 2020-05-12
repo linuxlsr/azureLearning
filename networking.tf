@@ -2,8 +2,10 @@
 
 # works but doesn't give map of subnets
 module "network" {
-  source              = "Azure/network/azurerm"
-  version             = "3.0.1"
+  #source              = "Azure/network/azurerm"
+  source   = "./custom_modules/network"
+  location = var.location
+  #version             = "3.0.1"
   resource_group_name = azurerm_resource_group.first_rg.name
   vnet_name           = "mynet"
   address_space       = var.vpc_cidr

@@ -75,15 +75,13 @@ resource "azurerm_network_security_group" "test_vm_sg" {
   tags = merge({ Name = "first security group" }, local.common_tags)
 }
 
-resource "azurerm_subnet_network_security_group_association" "sg-assoc-sn0" {
+resource "azurerm_subnet_network_security_group_association" "sg-assoc-subnets" {
+  count = length(module.network.vnet_subnets)
   network_security_group_id = azurerm_network_security_group.test_vm_sg.id
-  subnet_id                 = module.network.vnet_subnets[0]
+  subnet_id                 = module.network.vnet_subnets[count.index]
 }
 
-resource "azurerm_subnet_network_security_group_association" "sg-assoc-sn1" {
-  network_security_group_id = azurerm_network_security_group.test_vm_sg.id
-  subnet_id                 = module.network.vnet_subnets[1]
-}
+
 
 //resource "azurerm_network_interface_security_group_association" "sg-assoc-vm-nic" {
 //  network_security_group_id = azurerm_network_security_group.test_vm_sg.id
