@@ -19,6 +19,11 @@ provider "azuread" {
 provider "local" {
   version = "~>1.4"
 }
+
+//provider "azuredevops" {
+//  version = ">= 0.0.1"
+//}
+
 # backend config vars removed and executed as a script that gets access key and initializes remote backend.
 terraform {
   backend "azurerm" {}
