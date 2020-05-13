@@ -1,35 +1,4 @@
 #sg and rules
-//module "network-security-group" {
-//  source                = "Azure/network-security-group/azurerm"
-//  version               = "3.0.1"
-//  security_group_name   = "default_set"
-//  resource_group_name   = azurerm_resource_group.first_rg.name
-//  source_address_prefix = [data.external.myipaddr.result.ip]
-//  custom_rules = [
-//    {
-//      name                   = "modSGhttp"
-//      priority               = "200"
-//      direction              = "Inbound"
-//      access                 = "Allow"
-//      protocol               = "Tcp"
-//      destination_port_range = "80"
-//      description            = "mod-sg-http-rule"
-//      source_address_prefix  = data.external.myipaddr.result.ip
-//    },
-//    {
-//      name                   = "modSGssh"
-//      priority               = "100"
-//      direction              = "Inbound"
-//      access                 = "Allow"
-//      protocol               = "Tcp"
-//      destination_port_range = "22"
-//      description            = "mod-sg-http-rule"
-//      source_address_prefix  = data.external.myipaddr.result.ip
-//    }
-//  ]
-//  tags = merge({ Name = "first security group" }, local.common_tags)
-//}
-
 resource "azurerm_network_security_group" "test_vm_sg" {
   location            = var.location
   name                = "${var.application}_${var.environment}_test_sg"
@@ -63,7 +32,7 @@ resource "azurerm_network_security_group" "test_vm_sg" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "sg-assoc-subnets" {
-  count = length(module.network.vnet_subnets)
+  count                     = length(module.network.vnet_subnets)
   network_security_group_id = azurerm_network_security_group.test_vm_sg.id
   subnet_id                 = module.network.vnet_subnets[count.index]
 }

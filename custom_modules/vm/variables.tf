@@ -154,3 +154,4 @@ variable "nb_data_disk" {
   description = "(Optional) Number of the data disks attached to each virtual machine"
   default     = 0
 }
+
