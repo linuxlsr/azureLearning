@@ -1,6 +1,6 @@
 #VPC & subnets
 
-# works but doesn't give map of subnets
+# custom network module with additional outputs. Disabled ddos plan
 module "network" {
   #source              = "Azure/network/azurerm"
   source   = "./custom_modules/network"
@@ -9,8 +9,8 @@ module "network" {
   resource_group_name = azurerm_resource_group.first_rg.name
   vnet_name           = "mynet"
   address_space       = var.vpc_cidr
-  subnet_prefixes     = [var.firewall_subnet, var.public1, var.private2, var.private3, var.private4]
-  subnet_names        = ["firewall_subnet", "public1", "private2", "private3", "private4"]
+  subnet_prefixes     = [var.dmz, var.public1, var.public2, var.private1, var.private2]
+  subnet_names        = ["dmz", "public1", "public2", "private1", "private2"]
   tags                = merge({ Name = "first resource group" }, local.common_tags)
 }
 
