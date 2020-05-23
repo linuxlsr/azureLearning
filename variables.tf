@@ -113,3 +113,10 @@ variable "action_group_active" {
 
 # database
 variable "db_password" {}
+
+# dns
+variable "dns_public_zone_name" {}
+
+variable "dns_private_zone_name" {}
+
+variable "public_cname_record_target" {}
