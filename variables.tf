@@ -122,5 +122,9 @@ variable "dns_private_zone_name" {}
 variable "public_cname_record_target" {}
 
 # key vault / encryption
-
 variable "key_vault_secret" {}
+
+# azure active directory
+variable "first_user_upn" {}
+
+variable "first_user_pwd" {}

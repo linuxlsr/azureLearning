@@ -43,7 +43,8 @@ dns_public_zone_name
 dns_private_zone_name
 public_cname_record_target  
 key_vault_secret  
-
+first_user_upn
+first_user_pwd
 ```
 ## Remote State
 In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using[Backend / Partial Configuration] (https://www.terraform.io/docs/backends/config.html#partial-configuration) as a guide.
