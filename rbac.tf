@@ -18,7 +18,7 @@
 
 resource "azurerm_role_assignment" "read_only_role_assignment" {
   scope              = data.azurerm_subscription.primary.id
-  principal_id       = azuread_user.read_only.id
+  principal_id       = azuread_group.g_readonly.id
   role_definition_id = data.azurerm_role_definition.builtin_reader.id
 }
 

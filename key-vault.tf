@@ -10,8 +10,6 @@ resource "azurerm_key_vault" "key_vault" {
   local.common_tags)
 }
 
-data "azurerm_client_config" "current" {}
-
 #access policy for key vault
 resource "azurerm_key_vault_access_policy" "local_acess" {
   object_id    = data.azurerm_client_config.current.object_id
