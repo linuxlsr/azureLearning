@@ -128,3 +128,16 @@ variable "key_vault_secret" {}
 variable "first_user_upn" {}
 
 variable "first_user_pwd" {}
+
+# users for role testing
+variable "read_only_upn" {}
+
+variable "read_only_pwd" {}
+
+variable "big_dog_upn" {}
+
+variable "big_dog_pwd" {}
+
+variable "big_dog_name" {}
+
+variable "big_dog_mailnickname" {}
