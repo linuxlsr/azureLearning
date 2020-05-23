@@ -172,4 +172,6 @@ Storage asset name restrictions are a pain, only lowercase alphanumeric characte
 
 When importing resources into tf state, the cli import is case sensitive, and the azure portal json will give values with cases. In the case of dns zones, portal says dnsZones while cli will accept dnszones. Annoying and weird, but not a big blocker, was able to import my public zone and cname record resources from portal to state. Did learn that you need to use the -var-file option to skip all the annoying variable prompts.
 
+To create custom roles, you have to upgrade your azure ad to Premium P1 or P2. TF says it's created, but the new role doesn't show up in Default Directory | roles and administrators.
 
+Assigned a builtin role to a user, but roles are named different that in portal, i.e. Global reader is just Reader. Use [Builtin Roles]{(https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) for reference.

@@ -15,8 +15,8 @@ resource "azuread_user" "read_only" {
 
 resource "azuread_user" "big_dog" {
   user_principal_name = var.big_dog_upn
-  display_name        = "Read Only"
-  mail_nickname       = "readonly"
+  display_name        = "Big Dog"
+  mail_nickname       = var.admin_username
   password            = var.big_dog_pwd
 }
 
