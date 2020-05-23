@@ -70,8 +70,8 @@ variable "vpc_cidr" {
   default     = "10.0.0.0/21"
 }
 
-variable "firewall_subnet" {
-  description = "subnet for firewall"
+variable "dmz" {
+  description = "subnet for dmz"
   default     = "10.0.0.0/24"
 }
 
@@ -80,17 +80,17 @@ variable "public1" {
   default     = "10.0.1.0/24"
 }
 
-variable "private2" {
-  description = "subnet2 cidr block"
+variable "public2" {
+  description = "public2 subnet2 cidr block"
   default     = "10.0.2.0/24"
 }
 
-variable "private3" {
+variable "private1" {
   description = "subnet3 cidr block"
   default     = "10.0.3.0/24"
 }
 
-variable "private4" {
+variable "private2" {
   description = "subnet3 cidr block"
   default     = "10.0.4.0/24"
 }
@@ -113,3 +113,31 @@ variable "action_group_active" {
 
 # database
 variable "db_password" {}
+
+# dns
+variable "dns_public_zone_name" {}
+
+variable "dns_private_zone_name" {}
+
+variable "public_cname_record_target" {}
+
+# key vault / encryption
+variable "key_vault_secret" {}
+
+# azure active directory
+variable "first_user_upn" {}
+
+variable "first_user_pwd" {}
+
+# users for role testing
+variable "read_only_upn" {}
+
+variable "read_only_pwd" {}
+
+variable "big_dog_upn" {}
+
+variable "big_dog_pwd" {}
+
+variable "big_dog_name" {}
+
+variable "big_dog_mailnickname" {}

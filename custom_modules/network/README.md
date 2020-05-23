@@ -1,0 +1,1 @@
+Rewrite of Azure/network/azurerm, fixing address-prefix deprecation and adding name and cidr outputs.

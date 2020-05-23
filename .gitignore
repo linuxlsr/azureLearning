@@ -7,3 +7,12 @@ id_rsa.pub
 *.tfstate
 *.tfvars
 _config.yml
+*.env
+scripts/test
+init.ps1
+init.sh
+init.bat
+shutdown.ps1
+shutdown.sh
+shutdown.bat
+scripts/load_table.py

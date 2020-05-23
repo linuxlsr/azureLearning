@@ -37,6 +37,14 @@ security_center_contact_phone
 security_center_pricing_tier
 security_center_workspaces
 admin_username 
+route_table_name
+db_password
+dns_public_zone_name
+dns_private_zone_name
+public_cname_record_target  
+key_vault_secret  
+first_user_upn
+first_user_pwd
 ```
 ## Remote State
 In order to not store credentials in github, I cobbled together a tf-init.sh script stored one level up out of the local repo, which initializes the remote backend, using[Backend / Partial Configuration] (https://www.terraform.io/docs/backends/config.html#partial-configuration) as a guide.
@@ -157,3 +165,11 @@ For example: RDS, DynamoDB, S3, EC2 Volumes, etc all have separate console and c
  Deleting a resource protected by a backup policy is like trying to delete an rds instance with snapshots, you can't kill it till all the backups are gone. Got stuck with a VM that won't go away because a backup remains in the vault.
 [unable to destroy VM protected items #4276](https://github.com/terraform-providers/terraform-provider-azurerm/issues/4276) 
  workaround: ```terraform state rm  azurerm_backup_protected_vm.first-vm-backup-protect```
+
+If you declare a basic ddos plan it comes up as Standard and it will cost ~$20 a day. Ouch.
+
+Storage asset name restrictions are a pain, only lowercase alphanumeric characters from 3 to 63 characters long. Should I make a hash of the name as well?
+
+When importing resources into tf state, the cli import is case sensitive, and the azure portal json will give values with cases. In the case of dns zones, portal says dnsZones while cli will accept dnszones. Annoying and weird, but not a big blocker, was able to import my public zone and cname record resources from portal to state. Did learn that you need to use the -var-file option to skip all the annoying variable prompts.
+
+
