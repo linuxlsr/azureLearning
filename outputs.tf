@@ -29,3 +29,11 @@
 //////output "mssql_endpoint" {
 //////  value = azurerm_sql_server.test_sql_server.fully_qualified_domain_name
 //////}
+
+//output "cname_fqdn" {
+//  value = azurerm_dns_cname_record.my_public_cname.fqdn
+//}
+//
+//output "public_zone_name_servers" {
+//  value = azurerm_dns_zone.my_public_zone.name_servers
+//}

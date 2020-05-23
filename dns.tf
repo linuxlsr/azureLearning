@@ -21,10 +21,3 @@ resource "azurerm_dns_cname_record" "my_public_cname" {
   record = var.public_cname_record_target
 }
 
-output "cname_fqdn" {
-  value = azurerm_dns_cname_record.my_public_cname.fqdn
-}
-
-output "public_zone_name_servers" {
-  value = azurerm_dns_zone.my_public_zone.name_servers
-}
