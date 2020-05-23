@@ -4,20 +4,20 @@
 # test if resolves. So far, successful
 
 resource "azurerm_dns_zone" "my_public_zone" {
-  name = var.dns_public_zone_name
+  name                = var.dns_public_zone_name
   resource_group_name = azurerm_resource_group.first_rg.name
 }
 
 resource "azurerm_dns_zone" "my_private_zone" {
-  name = var.dns_private_zone_name
+  name                = var.dns_private_zone_name
   resource_group_name = azurerm_resource_group.first_rg.name
 }
 
 resource "azurerm_dns_cname_record" "my_public_cname" {
-  name = "www"
-  zone_name = azurerm_dns_zone.my_public_zone.name
+  name                = "www"
+  zone_name           = azurerm_dns_zone.my_public_zone.name
   resource_group_name = azurerm_resource_group.first_rg.name
-  ttl = 300
-  record = var.public_cname_record_target
+  ttl                 = 300
+  record              = var.public_cname_record_target
 }
 
