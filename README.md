@@ -174,4 +174,4 @@ When importing resources into tf state, the cli import is case sensitive, and th
 
 To create custom roles, you have to upgrade your azure ad to Premium P1 or P2. TF says it's created, but the new role doesn't show up in Default Directory | roles and administrators.
 
-Assigned a builtin role to a user, but roles are named different that in portal, i.e. Global reader is just Reader. Use [Builtin Roles]{(https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) for reference.
+Assigned a builtin role to a user, but roles are named different that in portal, i.e. Global reader is just Reader. Use [Builtin Roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) for reference.
