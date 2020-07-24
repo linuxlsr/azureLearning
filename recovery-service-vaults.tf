@@ -14,10 +14,10 @@ resource "azurerm_recovery_services_vault" "tfstate_vault" {
   sku                 = "Standard"
 }
 
-# experiment - create rsv first, which then creates file storage artifacts
-resource "azurerm_recovery_services_vault" "personal_vault" {
-  location            = var.location
-  name                = "personal-rsv"
-  resource_group_name = azurerm_resource_group.first_rg.name
-  sku                 = "Standard"
-}
+//# experiment - create rsv first, which then creates file storage artifacts
+//resource "azurerm_recovery_services_vault" "personal_vault" {
+//  location            = var.location
+//  name                = "personal-rsv"
+//  resource_group_name = azurerm_resource_group.first_rg.name
+//  sku                 = "Standard"
+//}
