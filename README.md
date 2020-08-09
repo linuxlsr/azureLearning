@@ -175,3 +175,5 @@ When importing resources into tf state, the cli import is case sensitive, and th
 To create custom roles, you have to upgrade your azure ad to Premium P1 or P2. TF says it's created, but the new role doesn't show up in Default Directory | roles and administrators.
 
 Assigned a builtin role to a user, but roles are named different that in portal, i.e. Global reader is just Reader. Use [Builtin Roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) for reference.
+
+Hard a challenge deleting a personal recovery vault after using it to backup a volume on my workstation. If you delete a backup, it is soft deleted by default, so you get to wait 14 days to do anything else. You have to disable soft delete first, then delete your backup data and the backup server definition. I took a lot of clicking around to find the mystery artifact that wouldn't allow me to get rid of the rsv. Seriously annoying.
